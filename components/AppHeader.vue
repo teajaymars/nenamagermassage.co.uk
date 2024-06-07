@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import logo from "~/assets/images/brand-logo.webp";
+
 const nuxtApp = useNuxtApp();
 const { activeHeadings, updateHeadings } = useScrollspy();
 
@@ -46,12 +48,12 @@ nuxtApp.hooks.hookOnce("page:finish", () => {
 <template>
   <UHeader :links="links">
     <template #logo>
-      Nuxt UI Pro <UBadge label="Landing" variant="subtle" class="mb-0.5" />
+      <img :src="logo" alt="Nena Mager Massage Therapy" class="h-24" />
     </template>
 
     <template #right>
       <UButton
-        label="Sign in"
+        label="Bookings"
         color="white"
         variant="ghost"
         trailing-icon="i-heroicons-arrow-right-20-solid"

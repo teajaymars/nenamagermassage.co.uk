@@ -1,24 +1,24 @@
-title: Nuxt UI Pro - Landing template
+title: Nena Mager Massage Therapy in Oxford
 description: Nuxt UI Pro is a collection of premium Vue components built on top of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.
 hero:
-  title: Build your landing in seconds
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-  headline:
-    label: Made with Nuxt UI Pro
-    to: https://ui.nuxt.com/pro
-    icon: i-heroicons-arrow-top-right-on-square-20-solid
+  title: A 360° approach to massage therapy
+  # description: Based in Oxford, UK
+  # headline:
+  #   label: Made with Nuxt UI Pro
+  #   to: https://ui.nuxt.com/pro
+  #   icon: i-heroicons-arrow-top-right-on-square-20-solid
   links:
-    - label: Get started
+    - label: Online Bookings
       icon: i-heroicons-arrow-right-20-solid
       trailing: true
       to: "#features"
       size: xl
-    - label: Use this template
-      icon: i-simple-icons-github
-      size: xl
-      color: gray
-      to: https://github.com/nuxt-ui-pro/landing
-      target: _blank
+    # - label: Use this template
+    #   icon: i-simple-icons-github
+    #   size: xl
+    #   color: gray
+    #   to: https://github.com/nuxt-ui-pro/landing
+    #   target: _blank
 logos:
   title: Trusted by the world's best
   icons:

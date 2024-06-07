@@ -1,7 +1,7 @@
 export default defineAppConfig({
   ui: {
-    primary: "indigo",
-    gray: "zinc",
+    primary: "rose",
+    gray: "merino",
     variables: {
       light: {
         background: "var(--color-gray-50)",
@@ -21,14 +21,16 @@ export default defineAppConfig({
       rounded: "rounded-full",
     },
     header: {
-      wrapper: "lg:!border-transparent bg-gray-50 dark:bg-gray-950",
+      wrapper:
+        "bg-gray-50 dark:bg-gray-950 py-8 border-b-4 border-gray-100 dark:border-gray-800",
+      logo: "hover:bg-gray-100 dark:bg-gray-800 border-transparent rounded",
       links: {
         wrapper:
-          "ring-1 ring-gray-200 dark:ring-gray-800 px-3 gap-x-0 rounded-full",
+          "ring-2 ring-primary-200 dark:ring-primary-800 px-3 gap-x-0 rounded-full",
         base: "py-2 px-4 font-medium transition-colors relative after:absolute after:-bottom-px after:inset-x-2 after:h-px after:rounded-full after:opacity-0 after:bg-gray-900 dark:after:bg-white after:transition-opacity",
-        active: "text-gray-900 dark:text-white after:opacity-100",
+        active: "text-primary-900 dark:text-white after:opacity-100",
         inactive:
-          "text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200",
+          "text-primary-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200",
       },
     },
     footer: {
