@@ -11,7 +11,7 @@ hero:
     - label: Get started
       icon: i-heroicons-arrow-right-20-solid
       trailing: true
-      to: '#features'
+      to: "#features"
       size: xl
     - label: Use this template
       icon: i-simple-icons-github
