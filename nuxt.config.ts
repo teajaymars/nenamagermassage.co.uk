@@ -11,4 +11,7 @@ export default defineNuxtConfig({
   typescript: {
     strict: false,
   },
+  colorMode: {
+    preference: "light",
+  },
 });
