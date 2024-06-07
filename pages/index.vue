@@ -17,17 +17,18 @@ useSeoMeta({
       :title="page.hero.title"
       :description="page.hero.description"
       :links="page.hero.links"
+      :ui="{
+        wrapper: `bg-[url('/images/backMassage.webp')] bg-cover bg-center bg-no-repeat`,
+      }"
     >
-      <ImagePlaceholder />
-
-      <ULandingLogos :title="page.logos.title" align="center">
+      <!-- <ULandingLogos :title="page.logos.title" align="center">
         <UIcon
           v-for="icon in page.logos.icons"
           :key="icon"
           :name="icon"
           class="w-12 h-12 lg:w-16 lg:h-16 flex-shrink-0 text-gray-900 dark:text-white"
         />
-      </ULandingLogos>
+      </ULandingLogos> -->
     </ULandingHero>
 
     <ULandingSection
