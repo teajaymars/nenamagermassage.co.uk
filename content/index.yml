@@ -1,7 +1,6 @@
 title: Nena Mager Massage Therapy in Oxford
 description: Nuxt UI Pro is a collection of premium Vue components built on top of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.
 hero:
-  title: A 360° approach to massage therapy
   # description: Based in Oxford, UK
   # headline:
   #   label: Made with Nuxt UI Pro
@@ -13,6 +12,7 @@ hero:
       trailing: true
       to: "#features"
       size: xl
+      color: primary
     # - label: Use this template
     #   icon: i-simple-icons-github
     #   size: xl
