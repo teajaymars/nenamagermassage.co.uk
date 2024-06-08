@@ -23,6 +23,7 @@ useSeoMeta({
       <template #title>
         <div
           class="text-white font-light !leading-tight text-5xl sm:text-5xl md:text-7xl"
+          id="welcome"
         >
           A 360° approach to<br />
           massage therapy
@@ -30,7 +31,7 @@ useSeoMeta({
       </template>
     </ULandingHero>
 
-    <ULandingSection :ui="{ wrapper: 'bg-white' }">
+    <ULandingSection :ui="{ wrapper: 'bg-white' }" id="philosophy">
       <div class="max-w-2xl mx-auto lg:ml-48">
         <div
           class="uppercase font-extralight text-3xl md:text-5xl text-slate-700 !leading-tight"
@@ -75,6 +76,7 @@ useSeoMeta({
 
     <ULandingSection
       headline="Treatments"
+      id="treatments"
       :ui="{
         headline: 'mb-0',
         container: 'gap-8 sm:gap-y-8',
