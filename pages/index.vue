@@ -9,18 +9,6 @@ useSeoMeta({
   description: page.value.description,
   ogDescription: page.value.description,
 });
-
-const landingHeroUi: any = {
-  title: [
-    "text-white", // color
-    "font-light", // weight
-    "!leading-tight", // line height, affected by font size classes
-    // font scaling
-    "text-5xl",
-    "sm:text-5xl",
-    "md:text-7xl",
-  ].join(" "),
-};
 </script>
 
 <template>
@@ -29,13 +17,16 @@ const landingHeroUi: any = {
       :description="page.hero.description"
       :links="page.hero.links"
       :ui="{
-        ...landingHeroUi,
         wrapper: `bg-[url('/images/backMassage.webp')] bg-cover bg-center bg-no-repeat`,
       }"
     >
       <template #title>
-        A 360° approach to<br />
-        massage therapy
+        <div
+          class="text-white font-light !leading-tight text-5xl sm:text-5xl md:text-7xl"
+        >
+          A 360° approach to<br />
+          massage therapy
+        </div>
       </template>
     </ULandingHero>
 
@@ -77,20 +68,19 @@ const landingHeroUi: any = {
     </ULandingSection>
 
     <ULandingSection
-      :title="page.features.title"
-      :description="page.features.description"
-      :headline="page.features.headline"
+      :ui="{
+        wrapper: `bg-[url('/images/legMassage.webp')] bg-cover bg-center bg-no-repeat aspect-[16/9] bg-fixed`,
+      }"
+    />
+
+    <ULandingSection
+      headline="Treatments"
+      :ui="{
+        headline: 'mb-0',
+        container: 'gap-8 sm:gap-y-8',
+      }"
     >
-      <UPageGrid
-        id="features"
-        class="scroll-mt-[calc(var(--header-height)+140px+128px+96px)]"
-      >
-        <ULandingCard
-          v-for="(item, index) in page.features.items"
-          :key="index"
-          v-bind="item"
-        />
-      </UPageGrid>
+      <MassageList />
     </ULandingSection>
 
     <ULandingSection
