@@ -103,7 +103,7 @@ useSeoMeta({
       <div
         class="prose text-white [&_*]:text-white prose prose-p:my-1 prose-li:my-0 prose-p:leading-normal"
       >
-        <h3 class="text-3xl md:text-4xl uppercase font-extralight">
+        <h3 class="text-3xl md:text-5xl uppercase font-extralight">
           Clinic Locations
         </h3>
         <p>I work from two locations:</p>
@@ -122,7 +122,7 @@ useSeoMeta({
         target="_blank"
       >
         <img
-          src="/images/oxford640.z14.png"
+          src="/images/oxford640.z12.png"
           alt="Clinic Locations"
           class="rounded"
         />

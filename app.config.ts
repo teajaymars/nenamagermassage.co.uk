@@ -22,6 +22,7 @@ export default defineAppConfig({
     },
 
     footer: {
+      wrapper: "bg-neutral-600 [&_*]:text-white",
       top: {
         wrapper: "border-t border-gray-200 dark:border-gray-800",
         container: "py-8 lg:py-16",
