@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   extends: ["@nuxt/ui-pro"],
   modules: ["@nuxt/content", "@nuxt/ui", "@nuxt/fonts"],
   ui: {
-    icons: ["heroicons", "simple-icons", "fa6-solid"],
+    icons: ["mdi"],
   },
   devtools: {
     enabled: true,
