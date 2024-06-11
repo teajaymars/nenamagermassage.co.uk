@@ -46,7 +46,8 @@ useSeoMeta({
     <ULandingSection
       :ui="{
         base: 'text-left items-start',
-        container: 'max-w-3xl mx-auto lg:-translate-x-[10%] gap-8 sm:gap-y-16',
+        container:
+          'max-w-3xl mx-auto lg:-translate-x-[5%] xl:-translate-x-[10%] gap-8 sm:gap-y-16',
         title:
           'whitespace-pre-line font-extralight uppercase !leading-tight text-slate-700',
       }"
@@ -97,15 +98,74 @@ useSeoMeta({
       :ui="{
         wrapper: 'bg-olive-400',
         title: 'text-white font-extralight uppercase',
+        container: '!items-start',
       }"
-      title="Clinic Locations"
       align="left"
     >
-      <template #description>
-        <div class="bg-blue-100">description</div>
-      </template>
-      <template #bottom> <div class="bg-blue-100">bottom</div> </template>
-      Clinic locations
+      <div class="prose text-white [&_*]:text-white">
+        <h3 class="text-3xl md:text-4xl uppercase font-extralight">
+          Clinic Locations
+        </h3>
+        <p>I work from two locations:</p>
+        <ul>
+          <li>The <strong>Little Health Hub</strong> on Thursdays.</li>
+          <li>
+            My <strong>home clinic</strong> on Tuesdays, Wednesdays, Thursdays
+            and Fridays.
+          </li>
+        </ul>
+        <p>The locations are a one-minute walk from each other.</p>
+      </div>
+
+      <img
+        src="/images/oxford640.z14.png"
+        alt="Clinic Locations"
+        class="rounded"
+      />
+
+      <ClinicLocation title="Thursday Clinic">
+        <template #location>
+          <p>
+            The Little Health Hub<br />
+            West Oxford Community Centre<br />
+            Botley Road<br />
+            OX2 0BT
+          </p>
+        </template>
+        <template #hours>
+          <ul>
+            <li><strong>Thursdays</strong> 2pm - 5.30pm</li>
+          </ul>
+        </template>
+        <template #parking>
+          <p>Parking available at the Community Centre.</p>
+        </template>
+      </ClinicLocation>
+
+      <ClinicLocation title="Home Clinic">
+        <template #location>
+          <p>
+            My home clinic is across the road from the Little Health Hub in OX2
+            0BD.
+          </p>
+          <p></p>
+          <p>Full address given upon booking.</p>
+        </template>
+        <template #hours>
+          <ul>
+            <li><strong>Tuesday</strong> Daytime</li>
+            <li><strong>Wednesday</strong> Daytime</li>
+            <li><strong>Thursday</strong> Evening</li>
+            <li><strong>Friday</strong> Daytime</li>
+          </ul>
+        </template>
+        <template #parking>
+          <p>
+            Parking available on Bridge Street, with permits available on
+            request.
+          </p>
+        </template>
+      </ClinicLocation>
     </ULandingSection>
 
     <ULandingSection
