@@ -32,21 +32,25 @@ const links = computed(() => [
     label: "Philosophy",
     to: "#philosophy",
     active: isActive("philosophy"),
+    icon: null,
   },
   {
     label: "Treatments",
     to: "#treatments",
     active: isActive("treatments"),
+    icon: null,
   },
   {
     label: "Location",
     to: "#location",
     active: isActive("location"),
+    icon: null,
   },
   {
     label: "Contact",
     to: "#contact",
     active: isActive("contact"),
+    icon: null,
   },
 ]);
 
@@ -58,7 +62,7 @@ const linksUi = ref({
   wrapper: "ring-1 ring-primary-300 px-3 gap-x-0 rounded-full",
   base: "py-2 px-4 font-medium transition-colors relative after:absolute after:-bottom-[1px] after:inset-x-2 after:h-[2px] after:opacity-0 after:bg-primary-700 dark:after:bg-white after:transition-opacity",
   active: "text-primary-700 after:opacity-100",
-  inactive: "text-primary-600 hover:after:opacity-50",
+  inactive: "text-primary-600 hover:text-primary-600 hover:after:opacity-100",
 });
 </script>
 

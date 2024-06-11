@@ -6,27 +6,21 @@ defineProps<{
 
 <template>
   <div
-    class="bg-olive-500 bg-opacity-50 rounded-xl p-8 flex flex-col gap-6 items-start text-white [&_*]:text-white"
+    class="bg-olive-500 bg-opacity-50 rounded-xl p-8 flex flex-col gap-5 items-start text-white [&_*]:text-white"
   >
-    <div class="text-3xl font-extralight uppercase text-center mb-4">
+    <div class="text-3xl font-extralight uppercase text-center mb-2">
       {{ title }}
     </div>
     <ClinicLocationBox title="Location" icon="i-mdi-map-marker">
-      <div class="prose">
-        <slot name="location" />
-      </div>
+      <slot name="location" />
     </ClinicLocationBox>
-    <hr class="border-white opacity-60" />
+    <UDivider />
     <ClinicLocationBox title="Clinic Hours" icon="i-mdi-calendar-clock">
-      <div class="prose">
-        <slot name="hours" />
-      </div>
+      <slot name="hours" />
     </ClinicLocationBox>
-    <hr class="border-white opacity-60" />
+    <UDivider />
     <ClinicLocationBox title="Parking" icon="i-mdi-car">
-      <div class="prose">
-        <slot name="parking" />
-      </div>
+      <slot name="parking" />
     </ClinicLocationBox>
   </div>
 </template>

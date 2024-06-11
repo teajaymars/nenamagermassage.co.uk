@@ -3,6 +3,7 @@ defineProps<{
   title: string;
 }>();
 </script>
+
 <template>
   <ULandingCard
     :title="title"

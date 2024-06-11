@@ -1,8 +1,4 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData("index", () =>
-  queryContent("/").findOne()
-);
-
 const pageTitle = ref("Nena Mager Massage Therapy in Oxford");
 const pageDescription = ref(
   "Massage therapy in Oxford. A 360° holistic approach to massage therapy. Book online today."
@@ -104,7 +100,9 @@ useSeoMeta({
       }"
       align="left"
     >
-      <div class="prose text-white [&_*]:text-white">
+      <div
+        class="prose text-white [&_*]:text-white prose prose-p:my-1 prose-li:my-0 prose-p:leading-normal"
+      >
         <h3 class="text-3xl md:text-4xl uppercase font-extralight">
           Clinic Locations
         </h3>
@@ -119,11 +117,16 @@ useSeoMeta({
         <p>The locations are a one-minute walk from each other.</p>
       </div>
 
-      <img
-        src="/images/oxford640.z14.png"
-        alt="Clinic Locations"
-        class="rounded"
-      />
+      <a
+        href="https://www.google.co.uk/maps/place/West+Oxford+Community+Centre/@51.7531613,-1.2758741,17.55z/data=!4m6!3m5!1s0x4876c69aff5db361:0xa8addbae62bb67cc!8m2!3d51.7528669!4d-1.2751845!16s%2Fg%2F1v3hzh5f"
+        target="_blank"
+      >
+        <img
+          src="/images/oxford640.z14.png"
+          alt="Clinic Locations"
+          class="rounded"
+        />
+      </a>
 
       <ClinicLocation title="Thursday Clinic">
         <template #location>
@@ -168,26 +171,6 @@ useSeoMeta({
           </p>
         </template>
       </ClinicLocation>
-    </ULandingSection>
-
-    <ULandingSection
-      id="contact"
-      title="Get In Touch"
-      class="scroll-mt-[var(--header-height)]"
-    >
-      <ULandingFAQ
-        multiple
-        :items="page.faq.items"
-        :ui="{
-          button: {
-            label: 'font-semibold',
-            trailingIcon: {
-              base: 'w-6 h-6',
-            },
-          },
-        }"
-        class="max-w-4xl mx-auto"
-      />
     </ULandingSection>
   </div>
 </template>
