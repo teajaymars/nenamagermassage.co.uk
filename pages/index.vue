@@ -21,12 +21,12 @@ useSeoMeta({
     <ULandingHero
       :links="[
         {
-          label: 'Online Bookings',
-          icon: 'i-heroicons-arrow-right-20-solid',
+          label: 'Book Online',
+          icon: 'i-mdi-arrow-right',
           trailing: true,
           to: '#features',
           size: 'xl',
-          color: 'primary',
+          color: 'gray',
         },
       ]"
       :ui="{
@@ -88,6 +88,7 @@ useSeoMeta({
       title="Treatments"
       id="treatments"
       :ui="{
+        wrapper: 'bg-primary-50',
         title: 'uppercase font-extralight text-slate-700',
       }"
     >
@@ -95,6 +96,7 @@ useSeoMeta({
     </ULandingSection>
 
     <ULandingSection
+      id="location"
       :ui="{
         wrapper: 'bg-olive-400',
         title: 'text-white font-extralight uppercase',
@@ -169,52 +171,8 @@ useSeoMeta({
     </ULandingSection>
 
     <ULandingSection
-      :title="page.pricing.title"
-      :description="page.pricing.description"
-      :headline="page.pricing.headline"
-    >
-      <UPricingGrid
-        id="pricing"
-        compact
-        class="scroll-mt-[calc(var(--header-height)+140px+128px+96px)]"
-      >
-        <UPricingCard
-          v-for="(plan, index) in page.pricing.plans"
-          :key="index"
-          v-bind="plan"
-        />
-      </UPricingGrid>
-    </ULandingSection>
-
-    <ULandingSection
-      :headline="page.testimonials.headline"
-      :title="page.testimonials.title"
-      :description="page.testimonials.description"
-    >
-      <UPageColumns
-        id="testimonials"
-        class="xl:columns-4 scroll-mt-[calc(var(--header-height)+140px+128px+96px)]"
-      >
-        <div
-          v-for="(testimonial, index) in page.testimonials.items"
-          :key="index"
-          class="break-inside-avoid"
-        >
-          <ULandingTestimonial v-bind="testimonial" />
-        </div>
-      </UPageColumns>
-    </ULandingSection>
-
-    <ULandingSection
-      class="bg-primary-50 dark:bg-primary-400 dark:bg-opacity-10"
-    >
-      <ULandingCTA v-bind="page.cta" :card="false" />
-    </ULandingSection>
-
-    <ULandingSection
-      id="faq"
-      :title="page.faq.title"
-      :description="page.faq.description"
+      id="contact"
+      title="Get In Touch"
       class="scroll-mt-[var(--header-height)]"
     >
       <ULandingFAQ

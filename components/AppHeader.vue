@@ -6,74 +6,87 @@ const hz: string[] = [
   "welcome",
   "philosophy",
   "treatments",
-  "testimonials",
-  "faq",
+  "location",
+  "contact",
 ];
 
+const activeHeading = ref("");
+watch(activeHeadings, (newValue, oldValue) => {
+  const wasAdded = newValue.filter((id) => !oldValue.includes(id));
+  const wasRemoved = oldValue.filter((id) => !newValue.includes(id));
+  if (wasAdded.length > 0) {
+    activeHeading.value = wasAdded[0];
+  } else if (wasRemoved.length > 0) {
+    activeHeading.value = newValue[newValue.length - 1];
+  }
+});
+
 function isActive(heading: string) {
-  const ordered = hz.filter((id) => activeHeadings.value.includes(id));
-  return ordered[0] === heading;
+  return activeHeading.value === heading;
+  // const ordered = hz.filter((id) => activeHeadings.value.includes(id));
+  // return ordered[0] === heading;
 }
 
 const links = computed(() => [
   {
     label: "Philosophy",
     to: "#philosophy",
-    icon: "i-heroicons-cube-transparent",
     active: isActive("philosophy"),
   },
   {
     label: "Treatments",
     to: "#treatments",
-    icon: "i-heroicons-credit-card",
     active: isActive("treatments"),
   },
   {
-    label: "Testimonials",
-    to: "#testimonials",
-    icon: "i-heroicons-academic-cap",
-    active: isActive("testimonials"),
+    label: "Location",
+    to: "#location",
+    active: isActive("location"),
   },
   {
-    label: "FAQ",
-    to: "#faq",
-    icon: "i-heroicons-question-mark-circle",
-    active: isActive("faq"),
+    label: "Contact",
+    to: "#contact",
+    active: isActive("contact"),
   },
 ]);
 
 nuxtApp.hooks.hookOnce("page:finish", () => {
   updateHeadings(hz.map((id) => document.querySelector(`#${id}`)));
 });
+
+const linksUi = ref({
+  wrapper: "ring-1 ring-primary-300 px-3 gap-x-0 rounded-full",
+  base: "py-2 px-4 font-medium transition-colors relative after:absolute after:-bottom-[1px] after:inset-x-2 after:h-[2px] after:opacity-0 after:bg-primary-700 dark:after:bg-white after:transition-opacity",
+  active: "text-primary-700 after:opacity-100",
+  inactive: "text-primary-600 hover:after:opacity-50",
+});
 </script>
 
 <template>
-  <UHeader :links="links">
-    <template #logo>
-      <img
-        src="/images/brand-logo.webp"
-        alt="Nena Mager Massage Therapy"
-        class="h-24"
-      />
-    </template>
+  <header class="bg-primary-50 sticky top-0 z-50 py-4 shadow-md">
+    <UContainer
+      class="flex items-center justify-between gap-3 h-[--header-height]"
+    >
+      <div class="lg:flex-1">
+        <NuxtLink to="/" aria-label="Nena Mager Massage Therapy">
+          <img
+            src="/images/brand-logo.webp"
+            alt="Nena Mager Massage Therapy"
+            class="h-24"
+          />
+        </NuxtLink>
+      </div>
 
-    <template #right>
-      <UButton
-        label="Bookings"
-        color="white"
-        variant="ghost"
-        trailing-icon="i-heroicons-arrow-right-20-solid"
-        class="hidden lg:flex"
-      />
-    </template>
+      <UHeaderLinks :links="links" class="hidden lg:flex" :ui="linksUi" />
 
-    <template #panel>
-      <UAsideLinks :links="links" />
-
-      <UDivider class="my-6" />
-
-      <UButton label="Sign in" color="white" block class="mb-3" />
-      <UButton label="Get started" block />
-    </template>
-  </UHeader>
+      <div class="flex items-center justify-end lg:flex-1 gap-1.5">
+        <UButton
+          label="Bookings"
+          color="primary"
+          variant="solid"
+          trailing-icon="i-mdi-arrow-right"
+        />
+      </div>
+    </UContainer>
+  </header>
 </template>

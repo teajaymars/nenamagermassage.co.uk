@@ -1,7 +1,7 @@
 export default defineAppConfig({
   ui: {
-    primary: "olive",
-    gray: "merino",
+    primary: "merino",
+    gray: "zinc",
     variables: {
       light: {
         background: "var(--color-gray-50)",
@@ -20,19 +20,7 @@ export default defineAppConfig({
     input: {
       rounded: "rounded-full",
     },
-    header: {
-      wrapper:
-        "bg-gray-50 dark:bg-gray-950 py-8 border-b-4 border-gray-100 dark:border-gray-800",
-      logo: "hover:bg-gray-100 dark:bg-gray-800 border-transparent rounded-xl",
-      links: {
-        wrapper:
-          "ring-2 ring-primary-400 dark:ring-primary-800 px-3 gap-x-0 rounded-full",
-        base: "py-2 px-4 font-medium transition-colors relative after:absolute after:-bottom-[3px] after:inset-x-2 after:h-[4px] after:opacity-0 after:bg-olive-600 dark:after:bg-white after:transition-opacity",
-        active: "text-primary-900 dark:text-white after:opacity-100",
-        inactive:
-          "text-primary-600 hover:text-primary-800 dark:text-gray-400 dark:hover:text-gray-200",
-      },
-    },
+
     footer: {
       top: {
         wrapper: "border-t border-gray-200 dark:border-gray-800",
@@ -40,18 +28,6 @@ export default defineAppConfig({
       },
       bottom: {
         wrapper: "border-t border-gray-200 dark:border-gray-800",
-      },
-    },
-    pricing: {
-      card: {
-        highlight: "ring-gray-900 dark:ring-white",
-        features: {
-          item: {
-            icon: {
-              base: "text-gray-900 dark:text-white",
-            },
-          },
-        },
       },
     },
   },
