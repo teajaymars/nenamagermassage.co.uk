@@ -1,6 +1,6 @@
 export default defineAppConfig({
   ui: {
-    primary: "rose",
+    primary: "olive",
     gray: "merino",
     variables: {
       light: {
@@ -26,11 +26,11 @@ export default defineAppConfig({
       logo: "hover:bg-gray-100 dark:bg-gray-800 border-transparent rounded-xl",
       links: {
         wrapper:
-          "ring-2 ring-primary-200 dark:ring-primary-800 px-3 gap-x-0 rounded-full",
-        base: "py-2 px-4 font-medium transition-colors relative after:absolute after:-bottom-[2px] after:inset-x-2 after:h-[2px] after:opacity-0 after:bg-primary-900 dark:after:bg-white after:transition-opacity",
+          "ring-2 ring-primary-400 dark:ring-primary-800 px-3 gap-x-0 rounded-full",
+        base: "py-2 px-4 font-medium transition-colors relative after:absolute after:-bottom-[3px] after:inset-x-2 after:h-[4px] after:opacity-0 after:bg-olive-600 dark:after:bg-white after:transition-opacity",
         active: "text-primary-900 dark:text-white after:opacity-100",
         inactive:
-          "text-primary-500 hover:text-primary-700 dark:text-gray-400 dark:hover:text-gray-200",
+          "text-primary-600 hover:text-primary-800 dark:text-gray-400 dark:hover:text-gray-200",
       },
     },
     footer: {

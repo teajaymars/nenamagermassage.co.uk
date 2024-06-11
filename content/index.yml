@@ -1,32 +1,3 @@
-title: Nena Mager Massage Therapy in Oxford
-description: Nuxt UI Pro is a collection of premium Vue components built on top of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.
-hero:
-  # description: Based in Oxford, UK
-  # headline:
-  #   label: Made with Nuxt UI Pro
-  #   to: https://ui.nuxt.com/pro
-  #   icon: i-heroicons-arrow-top-right-on-square-20-solid
-  links:
-    - label: Online Bookings
-      icon: i-heroicons-arrow-right-20-solid
-      trailing: true
-      to: "#features"
-      size: xl
-      color: primary
-    # - label: Use this template
-    #   icon: i-simple-icons-github
-    #   size: xl
-    #   color: gray
-    #   to: https://github.com/nuxt-ui-pro/landing
-    #   target: _blank
-logos:
-  title: Trusted by the world's best
-  icons:
-    - i-simple-icons-amazonaws
-    - i-simple-icons-heroku
-    - i-simple-icons-netlify
-    - i-simple-icons-vercel
-    - i-simple-icons-cloudflare
 pricing:
   headline: Pricing
   title: A plan for every need

@@ -21,6 +21,19 @@ export default <Partial<Config>>{
           "900": "#72371c",
           "950": "#3e1a0c",
         },
+        olive: {
+          "50": "#f5f5f0",
+          "100": "#e6e9de",
+          "200": "#d0d6c0",
+          "300": "#b3bc9a",
+          "400": "#a2ac87", // <- original tone
+          "500": "#7a865c",
+          "600": "#5f6a46",
+          "700": "#4a5239",
+          "800": "#3d4331",
+          "900": "#363b2c",
+          "950": "#1b1e15",
+        },
         // complementing the 'merino' palette
         zumthor: {
           "50": "#ebf2fd",

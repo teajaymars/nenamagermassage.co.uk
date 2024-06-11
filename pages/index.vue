@@ -3,86 +3,109 @@ const { data: page } = await useAsyncData("index", () =>
   queryContent("/").findOne()
 );
 
+const pageTitle = ref("Nena Mager Massage Therapy in Oxford");
+const pageDescription = ref(
+  "Massage therapy in Oxford. A 360° holistic approach to massage therapy. Book online today."
+);
+
 useSeoMeta({
-  title: page.value.title,
-  ogTitle: page.value.title,
-  description: page.value.description,
-  ogDescription: page.value.description,
+  title: pageTitle,
+  ogTitle: pageTitle,
+  description: pageDescription,
+  ogDescription: pageDescription,
 });
 </script>
 
 <template>
   <div>
     <ULandingHero
-      :description="page.hero.description"
-      :links="page.hero.links"
+      :links="[
+        {
+          label: 'Online Bookings',
+          icon: 'i-heroicons-arrow-right-20-solid',
+          trailing: true,
+          to: '#features',
+          size: 'xl',
+          color: 'primary',
+        },
+      ]"
       :ui="{
         wrapper: `bg-[url('/images/backMassage.webp')] bg-cover bg-center bg-no-repeat`,
+        title:
+          'text-white font-light !leading-tight text-5xl sm:text-5xl md:text-7xl drop-shadow-lg',
       }"
     >
       <template #title>
-        <div
-          class="text-white font-light !leading-tight text-5xl sm:text-5xl md:text-7xl"
-          id="welcome"
-        >
+        <div id="welcome">
           A 360° approach to<br />
           massage therapy
         </div>
       </template>
     </ULandingHero>
 
-    <ULandingSection :ui="{ wrapper: 'bg-white' }" id="philosophy">
-      <div class="max-w-2xl mx-auto lg:ml-48">
-        <div
-          class="uppercase font-extralight text-3xl md:text-5xl text-slate-700 !leading-tight"
-        >
-          Holistic<br />
-          Massage<br />
-          Philosophy
+    <ULandingSection
+      :ui="{
+        base: 'text-left items-start',
+        container: 'max-w-3xl mx-auto lg:-translate-x-[10%] gap-8 sm:gap-y-16',
+        title:
+          'whitespace-pre-line font-extralight uppercase !leading-tight text-slate-700',
+      }"
+      id="philosophy"
+      :title="'Holistic\nMassage\nPhilosophy'"
+    >
+      <div class="md:flex gap-8 flex-row align-top">
+        <div class="flex-shrink-0 float-right ml-4 mb-4 md:float-none md:ml-0">
+          <img
+            src="/images/nenaProfilePic.webp"
+            alt="Nena Mager Avatar"
+            class="rounded-full w-32 md:w-48"
+          />
         </div>
-
-        <div class="md:flex mt-8 md:mt-12 gap-8 flex-row align-top">
-          <div
-            class="flex-shrink-0 float-right ml-4 mb-4 md:float-none md:ml-0"
-          >
-            <img
-              src="/images/nenaProfilePic.webp"
-              alt="Nena Mager Avatar"
-              class="rounded-full w-32 md:w-48"
-            />
-          </div>
-          <div class="prose">
-            <p>
-              Based in West Oxford, I'm passionate about providing quality
-              massage therapy. Whether it's a full body restoring massage to
-              help unwind aching muscles and a tired mind; or a deep tissue
-              sports massage, to target specific areas of pain and dysfunction.
-            </p>
-            <p>
-              Whatever your ailment, it's my pleasure to help you. I take a 360°
-              holistic approach - not just treating the areas that hurt, but
-              working with you to find the root cause.
-            </p>
-          </div>
+        <div class="prose">
+          <p>
+            Based in West Oxford, I'm passionate about providing quality massage
+            therapy. Whether it's a full body restoring massage to help unwind
+            aching muscles and a tired mind; or a deep tissue sports massage, to
+            target specific areas of pain and dysfunction.
+          </p>
+          <p>
+            Whatever your ailment, it's my pleasure to help you. I take a 360°
+            holistic approach - not just treating the areas that hurt, but
+            working with you to find the root cause.
+          </p>
         </div>
       </div>
     </ULandingSection>
 
     <ULandingSection
       :ui="{
-        wrapper: `bg-[url('/images/legMassage.webp')] bg-cover bg-center bg-no-repeat aspect-[16/9] bg-fixed`,
+        wrapper: `bg-[url('/images/legMassage.webp')] bg-cover bg-center bg-no-repeat aspect-[2/1] bg-fixed`,
       }"
     />
 
     <ULandingSection
-      headline="Treatments"
+      title="Treatments"
       id="treatments"
       :ui="{
-        headline: 'mb-0',
-        container: 'gap-8 sm:gap-y-8',
+        title: 'uppercase font-extralight text-slate-700',
       }"
     >
       <MassageList />
+    </ULandingSection>
+
+    <ULandingSection
+      :ui="{
+        wrapper: 'bg-olive-400',
+        title: 'text-white font-extralight uppercase',
+      }"
+      title="Clinic Locations"
+      align="left"
+    >
+      <template #description>
+        <div class="bg-blue-100">description</div>
+      </template>
+      <template #bottom> <div class="bg-blue-100">bottom</div> </template>
+      Clinic locations
     </ULandingSection>
 
     <ULandingSection
