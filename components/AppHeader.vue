@@ -89,6 +89,8 @@ const linksUi = ref({
           color="primary"
           variant="solid"
           trailing-icon="i-mdi-arrow-right"
+          :to="useRuntimeConfig().public.bookings"
+          target="_blank"
         />
       </div>
     </UContainer>

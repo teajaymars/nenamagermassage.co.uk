@@ -14,4 +14,10 @@ export default defineNuxtConfig({
   colorMode: {
     preference: "light",
   },
+  runtimeConfig: {
+    public: {
+      bookings:
+        "https://nena-mager-massage-therapy.uk2.cliniko.com/bookings?embedded=true#location",
+    },
+  },
 });
